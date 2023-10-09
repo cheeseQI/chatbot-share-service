@@ -16,6 +16,7 @@ def handler(event, context):
         except json.JSONDecodeError:
                 print('Error parsing JSON body')
 
+    # Initialize LLM and third-paarty service here
     llm = OpenAI(temperature=.3)
     zapier = ZapierNLAWrapper()
     toolkit = ZapierToolkit.from_zapier_nla_wrapper(zapier)
